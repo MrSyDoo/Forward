@@ -47,6 +47,11 @@ class Bot(Client):
         logging.info(text)
         success = failed = 0
         users = await db.get_all_frwd()
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
+        await idle()
         async for user in users:
            chat_id = user['user_id']
            try:
