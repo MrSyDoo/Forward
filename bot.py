@@ -23,6 +23,8 @@ logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 
+PORT = Config.PORT
+
 class Bot(Client): 
     def __init__(self):
         super().__init__(
