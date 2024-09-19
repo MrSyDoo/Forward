@@ -14,7 +14,7 @@ from database import db
 from config import Config  
 from aiohttp import web
 from plugins import web_server
-from pyrogram import Client, __version__
+from pyrogram import Client, __version__, idle
 from pyrogram.raw.all import layer 
 from pyrogram.enums import ParseMode
 from pyrogram.errors import FloodWait 
