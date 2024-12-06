@@ -4,7 +4,7 @@ from threading import Thread
 import json
 from pyrogram import Client, filters
 import logging
-import asyncio
+import asyncio, random 
 
 # Logging setup
 logging.basicConfig(level=logging.INFO)
